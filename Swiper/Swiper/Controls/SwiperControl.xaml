@@ -13,7 +13,9 @@
 			<ColumnDefinition Width="100" /> 
         </Grid.ColumnDefinitions>
 
-        <ContentView x:Name="photo" Padding="40"
+
+
+		<ContentView x:Name="photo" Padding="40"
                      Grid.ColumnSpan="3">
             <Grid BackgroundColor="Black"
                   Padding="1">
@@ -44,5 +46,26 @@
                        FontFamily="Bradley Hand"/>
 			</Grid>
         </ContentView>
-    </Grid>
+
+        <StackLayout x:Name="likeStackLayout"
+                     Grid.Column="2"
+                     Opacity="0"
+                     Padding="0, 100">
+            <Label Text="LIKE"
+                   TextColor="Lime"
+                   FontSize="30"
+                   Rotation="30"
+                   FontAttributes="Bold"/>
+
+        </StackLayout>
+
+	    <StackLayout x:Name="denyStackLayout" Opacity="0"
+	                 Padding="0, 100" HorizontalOptions="End">
+		    <Label Text="DENY"
+		           TextColor="Red"
+		           FontSize="30"
+		           Rotation="-20"
+		           FontAttributes="Bold" />
+	    </StackLayout>
+	</Grid>
 </ContentView>
